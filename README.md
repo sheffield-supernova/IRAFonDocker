@@ -17,4 +17,4 @@ To access the full range of x-window utilities, you need to invoke *socat*, for 
                 -v /tmp/.X11-unix:/tmp/.X11-unix \
                 -v $1:/data irafmachine;
 
-**Note** this installs the barest version of iraf (i.e. no special packages), and iraf has no been setup for the user (so, each time, one will have to go through the process of making an IRAF directory and running "mkiraf").
+**Note** this installs the barest version of iraf (i.e. no special packages), and iraf has not been setup for the user (so, each time, one will have to go through the process of making an IRAF directory and running "mkiraf").
