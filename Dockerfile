@@ -24,6 +24,11 @@ RUN /bin/bash -c "source /root/.bashrc \
 
 RUN echo 'eval "$(/home/miniconda/bin/conda shell.bash hook)"' > /home/.profile
 RUN mkdir /home/iraf/
+
+WORKDIR /home/iraf
+COPY login.cl.dk ./login.cl
+
+RUN mkdir /home/iraf/uparm
 RUN mkdir /tmp/iraf/
 RUN mkdir /data
 WORKDIR /data
