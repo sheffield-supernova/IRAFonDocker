@@ -18,8 +18,7 @@ RUN /bin/bash /root/.bashrc
 RUN /bin/bash -c "source /root/.bashrc \
       && conda update -n base -c defaults conda \
       && conda config --add channels http://ssb.stsci.edu/astroconda \
-      && conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci -y \
-      && conda create -n geminiconda python=2.7 gemini stsci iraf-all pyraf-all \
+      && conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci gemini -y \
       && /bin/bash"
 
 RUN echo 'eval "$(/home/miniconda/bin/conda shell.bash hook)"' > /home/.profile
@@ -31,6 +30,7 @@ COPY login.cl.dk ./login.cl
 RUN mkdir /home/iraf/uparm
 RUN mkdir /tmp/iraf/
 RUN mkdir /data
-WORKDIR /data
+WORKDIR /home/iraf
 
 CMD ["/bin/bash"]
+CMD ["source activate iraf27"]
