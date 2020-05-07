@@ -1,6 +1,6 @@
 # Can Docker run 32-bit IRAF on a 64-bit Catalina Mac?
 
-Short answer: yep.
+Short answer: yep.  If you wish to use this, it is entirely at your own risk (no guarantees or warranties are implied).
 
 Apparently, using socat one can also run x-windows (which used to cause IRAF, in particular xgterms, to crash on Mojave, as well)
 
