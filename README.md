@@ -17,4 +17,4 @@ To access the full range of x-window utilities, you need to invoke *socat*, for 
                 -v /tmp/.X11-unix:/tmp/.X11-unix \
                 -v $1:/data irafmachine;
 
-**Note** this installs the barest version of iraf (i.e. no special packages - just the stsci and gemini packages). There is a bare bones `login.cl` file.  From the command prompt, one has to run `xgterm` in `/home/iraf` and then invok `cl`.
+**Note** this installs the barest version of iraf (i.e. no special packages - just the stsci and gemini packages). There is a bare bones `login.cl` file.  From the command prompt, one has to run `xgterm` in `/home/iraf` and then invoke `cl`.  If you run the above as a script (e.g. `./runiraf`), adding the path to the directory containing your data (`./runiraf /where/is/my/data`), will automatically map that path to `/data` inside the container.
